@@ -5,218 +5,332 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pavan Raj | Portfolio</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
-    background:#f4f6f9;
-    color:#333;
-}
-
-header{
-    background:#1e3a8a;
-    color:white;
-    text-align:center;
-    padding:60px 20px;
-}
-
-header h1{
-    font-size:3rem;
-}
-
-header p{
-    margin-top:10px;
-    font-size:1.2rem;
+background:#0f172a;
+color:#ffffff;
+line-height:1.6;
 }
 
 nav{
-    background:#111827;
-    padding:15px;
-    text-align:center;
+position:fixed;
+top:0;
+width:100%;
+background:rgba(15,23,42,0.95);
+backdrop-filter:blur(10px);
+padding:15px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:1000;
 }
 
-nav a{
-    color:white;
-    text-decoration:none;
-    margin:0 15px;
-    font-weight:bold;
+.logo{
+font-size:24px;
+font-weight:700;
+color:#38bdf8;
 }
 
-section{
-    max-width:1000px;
-    margin:auto;
-    padding:50px 20px;
+nav ul{
+display:flex;
+list-style:none;
+gap:25px;
 }
 
-h2{
-    color:#1e3a8a;
-    margin-bottom:20px;
+nav ul li a{
+text-decoration:none;
+color:white;
+transition:0.3s;
 }
 
-.card{
-    background:white;
-    padding:20px;
-    border-radius:10px;
-    box-shadow:0 2px 8px rgba(0,0,0,0.1);
-    margin-bottom:20px;
+nav ul li a:hover{
+color:#38bdf8;
 }
 
-.skills{
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
+.hero{
+height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:20px;
 }
 
-.skill{
-    background:#1e3a8a;
-    color:white;
-    padding:10px 15px;
-    border-radius:20px;
+.hero-content h1{
+font-size:4rem;
+margin-bottom:10px;
 }
 
-.project{
-    margin-bottom:20px;
+.hero-content h1 span{
+color:#38bdf8;
 }
 
-footer{
-    background:#111827;
-    color:white;
-    text-align:center;
-    padding:20px;
+.hero-content p{
+font-size:1.2rem;
+max-width:700px;
+margin:auto;
+color:#cbd5e1;
 }
 
 .btn{
-    display:inline-block;
-    background:#1e3a8a;
-    color:white;
-    padding:12px 20px;
-    text-decoration:none;
-    border-radius:5px;
-    margin-top:10px;
+display:inline-block;
+margin-top:25px;
+padding:12px 30px;
+background:#38bdf8;
+color:#0f172a;
+font-weight:600;
+text-decoration:none;
+border-radius:30px;
+transition:0.3s;
 }
 
 .btn:hover{
-    background:#2563eb;
+transform:translateY(-3px);
+}
+
+section{
+padding:90px 10%;
+}
+
+.section-title{
+font-size:2.5rem;
+text-align:center;
+margin-bottom:50px;
+color:#38bdf8;
+}
+
+.card{
+background:#1e293b;
+padding:25px;
+border-radius:15px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.skills{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:15px;
+}
+
+.skill{
+background:#334155;
+padding:15px;
+text-align:center;
+border-radius:10px;
+font-weight:500;
+}
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.project-card{
+background:#1e293b;
+padding:25px;
+border-radius:15px;
+transition:0.3s;
+}
+
+.project-card:hover{
+transform:translateY(-10px);
+}
+
+.timeline{
+display:grid;
+gap:20px;
+}
+
+.contact{
+text-align:center;
+}
+
+.contact a{
+color:#38bdf8;
+text-decoration:none;
+}
+
+footer{
+background:#020617;
+text-align:center;
+padding:25px;
+margin-top:50px;
+}
+
+@media(max-width:768px){
+
+.hero-content h1{
+font-size:2.7rem;
+}
+
+nav ul{
+display:none;
+}
 }
 </style>
 </head>
 
 <body>
 
-<header>
-    <h1>Pavan Raj</h1>
-    <p>Computer Science and Design Engineering Student</p>
-    <p>UI/UX Designer | Software Developer | Android Developer</p>
-</header>
-
 <nav>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#internship">Internship</a>
-    <a href="#publication">Publication</a>
-    <a href="#contact">Contact</a>
+<div class="logo">Pavan Raj</div>
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
 </nav>
 
+<section class="hero">
+<div class="hero-content">
+<h1>Hi, I'm <span>Pavan Raj</span></h1>
+<p>
+Computer Science & Design Engineering Student passionate about
+Software Development, AI, UI/UX Design, Android Development,
+and Human-Centered Technology.
+</p>
+
+<a href="#projects" class="btn">View My Work</a>
+</div>
+</section>
+
 <section id="about">
-    <h2>About Me</h2>
-    <div class="card">
-        <p>
-            I am a Computer Science and Design Engineering student passionate about
-            software development, UI/UX design, Android application development,
-            and human-centered technology. I enjoy building innovative solutions
-            that solve real-world problems and improve user experiences.
-        </p>
-    </div>
+<h2 class="section-title">About Me</h2>
+
+<div class="card">
+<p>
+I am a Computer Science and Design Engineering student with
+a strong interest in software development, artificial intelligence,
+mobile applications, and user experience design.
+I enjoy building innovative solutions that solve real-world
+problems and create meaningful impact through technology.
+</p>
+</div>
+
 </section>
 
 <section id="skills">
-    <h2>Skills</h2>
-    <div class="card skills">
-        <span class="skill">Python</span>
-        <span class="skill">Java</span>
-        <span class="skill">HTML</span>
-        <span class="skill">CSS</span>
-        <span class="skill">JavaScript</span>
-        <span class="skill">Android Studio</span>
-        <span class="skill">Figma</span>
-        <span class="skill">UI/UX Design</span>
-        <span class="skill">Git & GitHub</span>
-    </div>
+
+<h2 class="section-title">Skills</h2>
+
+<div class="skills">
+
+<div class="skill">Python</div>
+<div class="skill">Java</div>
+<div class="skill">HTML</div>
+<div class="skill">CSS</div>
+<div class="skill">JavaScript</div>
+<div class="skill">React.js</div>
+<div class="skill">FastAPI</div>
+<div class="skill">Android Studio</div>
+<div class="skill">Figma</div>
+<div class="skill">GitHub</div>
+<div class="skill">UI/UX Design</div>
+<div class="skill">ChromaDB</div>
+
+</div>
+
 </section>
 
 <section id="projects">
-    <h2>Projects</h2>
 
-    <div class="card project">
-        <h3>Madhu-Siri</h3>
-        <p>
-            Bee-Farmer Harmony application that helps farmers and beekeepers
-            coordinate pesticide spraying schedules to protect bee colonies and
-            promote sustainable agriculture.
-        </p>
-    </div>
+<h2 class="section-title">Projects</h2>
 
-    <div class="card project">
-        <h3>Shaale-Vikas</h3>
-        <p>
-            School development platform connecting alumni and donors with schools
-            to support educational growth and community engagement.
-        </p>
-    </div>
+<div class="projects">
 
-    <div class="card project">
-        <h3>Pattern Generator</h3>
-        <p>
-            Java-based application that prints alphabet and number patterns
-            using nested loops and logical programming techniques.
-        </p>
-    </div>
+<div class="project-card">
+<h3>🐝 Madhu-Siri</h3>
+<p>
+Bee-Farmer Harmony application that enables communication
+between farmers and beekeepers through location-based alerts
+to reduce bee colony losses caused by pesticide spraying.
+</p>
+</div>
+
+<div class="project-card">
+<h3>🏫 Shaale-Vikas</h3>
+<p>
+School development platform connecting alumni and donors
+with schools to support educational infrastructure and growth.
+</p>
+</div>
+
+<div class="project-card">
+<h3>🤖 AI Chatbot System</h3>
+<p>
+Developed AI-powered chatbot solutions using Python,
+FastAPI, React.js and ChromaDB for intelligent information retrieval.
+</p>
+</div>
+
+</div>
+
 </section>
 
-<section id="internship">
-    <h2>Internship Experience</h2>
-    <div class="card">
-        <h3>AI Development Intern</h3>
-        <ul>
-            <li>Worked on AI-powered chatbot applications.</li>
-            <li>Developed solutions using Python, FastAPI, React.js, and ChromaDB.</li>
-            <li>Implemented vector database retrieval systems.</li>
-            <li>Collaborated on testing and deployment of AI features.</li>
-            <li>Improved chatbot accuracy and user experience.</li>
-        </ul>
-    </div>
-</section>
+<section id="experience">
 
-<section id="publication">
-    <h2>Research Publication</h2>
-    <div class="card">
-        <h3>Human-Centered Design in Engineering</h3>
-        <p>
-            Published in the International Journal of Advanced Research in
-            Science, Communication and Technology (IJARSCT).
-        </p>
-    </div>
+<h2 class="section-title">Experience</h2>
+
+<div class="timeline">
+
+<div class="card">
+<h3>AI Development Intern</h3>
+<p>
+Worked on AI-powered applications involving chatbot development,
+backend systems and SEO optimization.
+Implemented vector database retrieval using ChromaDB and
+collaborated on deployment of intelligent AI solutions.
+</p>
+</div>
+
+<div class="card">
+<h3>Research Publication</h3>
+<p>
+Published a review paper on Human-Centered Design in Engineering
+in the International Journal of Advanced Research in Science,
+Communication and Technology (IJARSCT).
+</p>
+</div>
+
+</div>
+
 </section>
 
 <section id="contact">
-    <h2>Contact Me</h2>
-    <div class="card">
-        <p><strong>Email:</strong> your-email@gmail.com</p>
-        <p><strong>LinkedIn:</strong> linkedin.com/in/your-profile</p>
-        <p><strong>GitHub:</strong> github.com/yourusername</p>
 
-        <a href="resume.pdf" class="btn">Download Resume</a>
-    </div>
+<h2 class="section-title">Contact</h2>
+
+<div class="contact">
+
+<p>Email: your-email@gmail.com</p>
+<p>LinkedIn: linkedin.com/in/your-profile</p>
+<p>GitHub: github.com/yourusername</p>
+
+<a class="btn" href="#">Download Resume</a>
+
+</div>
+
 </section>
 
 <footer>
-    <p>© 2026 Pavan Raj | Portfolio Website</p>
+<p>© 2026 Pavan Raj. All Rights Reserved.</p>
 </footer>
 
 </body>
